@@ -6,6 +6,51 @@
     <title>Aula 29</title>
 </head>
 <body>
-    
+    <script>
+       /*
+
+        -----------------METODOS MATH------------------
+        
+
+       var mt=Math.PI => Retorna o valor de PI
+       var mt=Math.E => Retorna o valor de EULER
+       var mt=Math.SQRT2 => Retorna o valor da RAIZ QUADRADA DE 2
+       var mt=Math.SQRT1_2 => Retorna o valor da RAIZ QUADRADA DE 1 SOBRE 2
+       ----------- OS  3 METODOS PARA ARRENDODAMENTO ----------------
+       ---- var valor=10.5 -------
+       var mt=Math.ceil(variavel valor) arredonda sempre pra cima
+       var mt=Mah.floor=>(msm coisa) arrendonda sempre pra baixo
+       var mt=Math.round =>(msm coisa) arredondamento padrão, apartir de 5 pra cima e menor que 5 para baixo
+
+       var mt=Math.pow => eleva um numero a outro numero(valor,10)variavel valor elevado a 10
+       var mt=Math.random(); =>retorna um valor aleatorio entre 0 e 1
+       var mt=Math.random()*10; =>retorna um valor aleatorio entre 0 e 10
+       var mt=Math.round(math.random()*10); =>retorna um valor aleatorio inteiros
+
+       document.write(mt)
+       ----------------------------------------------------------------
+        
+       var valor=59
+
+       for(var i=0;i<6;i++){
+        document.write(Math.round((Math.random()*valor)+1)+"<br>");
+       }  RETORNA 6 NUMEROS ALEATORIOS ENTRE 1 E 60(EXEMPLO DA MEGA SENA)
+       -----------------------------------------------------------------
+       METODO DE SENO E COSSENO
+
+       var angulo=45
+
+       var c=Math.cos(angulo * Math.PI/180);
+       var s=Math.sin(angulo * Math.PI/180);
+
+       document.write("Angulo: " + angulo + "<br>Cosseno: " + c + "<br>Seno: " + s);
+       */
+
+       var valor=Math.min(1,2,3,4,5,6,7,8);//min retorna o valor minimo e max o valor maximo
+
+       document.write(valor)
+
+        
+    </script>
 </body>
 </html>
