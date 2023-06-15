@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 34</title>
+    <style>
+        #dv1{
+            width: 100px;
+            height: 100px;
+            border: 1px solid #000;
+            background-color: #f000;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+        }
+    </style>
+    <script>
+
+        var px=0;
+        var py=0;
+
+        function move(){
+            var obj=document.getElementById("dv1");
+            var tecla=event.keyCode;
+            //codigo de setinhas do teclado
+            //37=para esquerda - 38=para cima - 39=para direita - 40=para baixo
+            if(tecla==37){
+                px-=20;
+                obj.style.left=px+"px";
+            }else if(tecla == 38){
+                py-=20;
+                obj.style.top=py+"px"
+            }else if(tecla == 39){
+                px+=20;
+                obj.style.left=px+"px"
+            }else if(tecla == 40){
+                py+=20;
+                obj.style.top=py+"px"
+            }else if(tecla == 13){
+                alert("Evento keydown Removido")
+                document.removeEventListener("keydown",move);
+                obj.style.backgroundColor="#f000"
+            }
+        }
+
+        document.removeEventListener("keydown",move);
+
+        function add(){
+            alert("Evento keydown Adicionado")
+            document.addEventListener("keydown",move);
+            obj=document.getElementById("dv1").style.backgroundColor="#f00"
+            
+        }
+            
+        
+            
+
+    </script>
+</head>
+<body>
+    <div id="dv1" onclick="add()"></div>
+</body>
+</html>
