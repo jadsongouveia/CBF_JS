@@ -17,16 +17,17 @@
         var tmp;
 
         function mudaCor(){
-            var obj=document.getElementById("dv1")
+            var obj=document.getElementById("dv1");
             var r=Math.floor(Math.random()*255);
             var g=Math.floor(Math.random()*255);
             var b=Math.floor(Math.random()*255);
             obj.style.backgroundColor="rgb("+r+","+g+","+b+")";
         }
 
-        //var tmp=setTimeout(mudaCor,1000);
+        //var tmp=setTimeout(mudaCor,300);
+
         function iniciar(){
-            tmp=setInterval(mudaCor,200);
+            tmp=setInterval(mudaCor,500);
         }
 
         function parar(){
@@ -34,12 +35,11 @@
         }
 
         function addEventos(){
-            document.getElementById("bt1").addEventListener("click",iniciar)
-            document.getElementById("bt2").addEventListener("click",parar)
+            document.getElementById("bt1").addEventListener("click",iniciar);
+            document.getElementById("bt2").addEventListener("click",parar);
         }
         
-        window.addEventListener("load",addEventos)
-
+        window.addEventListener("load",addEventos);
     </script>
 </head>
 <body>
