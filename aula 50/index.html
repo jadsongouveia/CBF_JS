@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 50</title>
+    <style>
+        .letra{
+            width: 30px;
+            font-size: 30px;
+            text-transform: uppercase;
+            text-align: center;
+            margin: 5px;
+            display: none;
+        }
+        .letraJ{
+            width: 30px;
+            font-size: 30px;
+            text-transform: uppercase;
+            text-align: center;
+            margin: 5px;
+        }
+        .dvdisplay{
+            display: block;
+        }
+        #divForca{
+            position: absolute;
+            left: 150px;
+        }
+        #cabeca{
+            position: absolute;
+            top: 0px;
+            left: 0px;
+        }
+        #corpo{
+            position: absolute;
+            top: 200px;
+            left: 105px;
+        }
+        #bracoE{
+            position: absolute;
+            top: 220px;
+            left: -17;
+        }
+        #bracoD{
+            position: absolute;
+            top: 220px;
+            left: 105px;
+        }
+        #pernaE{
+            position: absolute;
+            top: 450px;
+        }
+    </style>
+</head>
+<body>
+    <div id="dvmenu" class="dvdisplay">
+        <button onclick="inicia()">Nova Palavra</button>
+    </div>
+    <div id="dvpalavra" class="dvdisplay">
+        <input type="text" id="letra0" class="letra" maxlength="1">
+        <input type="text" id="letra1" class="letra" maxlength="1">
+        <input type="text" id="letra2" class="letra" maxlength="1">
+        <input type="text" id="letra3" class="letra" maxlength="1">
+        <input type="text" id="letra4" class="letra" maxlength="1">
+        <input type="text" id="letra5" class="letra" maxlength="1">
+        <input type="text" id="letra6" class="letra" maxlength="1">
+        <input type="text" id="letra7" class="letra" maxlength="1">
+        <input type="text" id="letra8" class="letra" maxlength="1">
+        <input type="text" id="letra9" class="letra" maxlength="1">
+        <input type="text" id="letra10" class="letra" maxlength="1">
+        <input type="text" id="letra11" class="letra" maxlength="1">
+        <input type="text" id="letra12" class="letra" maxlength="1">
+        <input type="text" id="letra13" class="letra" maxlength="1">
+        <input type="text" id="letra14" class="letra" maxlength="1">
+        <input type="text" id="letra15" class="letra" maxlength="1">
+        <input type="text" id="letra16" class="letra" maxlength="1">
+        <input type="text" id="letra17" class="letra" maxlength="1">
+        <input type="text" id="letra18" class="letra" maxlength="1">
+        <input type="text" id="letra19" class="letra" maxlength="1">
+    </div>
+    <div id="dvjogador" class="dvdisplay">
+        <div id="controlesJogador">
+            <input type="text" id="letraJ" class="letraJ" maxlength="1">
+            <button onclick="jogar()">Jogar</button>
+            <button onclick="dica()">Dica</button>
+            <div id="dvmsg"></div><br>
+            <div id="dvletrasdigitadas">Letras Digitadas:</div>
+        </div>
+        <div id="dvForca">
+            <img src="" alt="">
+            <img src="" alt="">
+            <img src="" alt="">
+            <img src="" alt="">
+            <img src="" alt="">
+            <img src="" alt="">
+        </div>
+    </div>
+</body>
+</html>
