@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aula 50</title>
+    <title>JOGO DA FORCA</title>
     <style>
         .letra{
             width: 30px;
@@ -28,7 +28,7 @@
             left: 150px;
         }
         #cabeca{
-            position: absolute;
+            font-size: 100px;
             top: 0px;
             left: 0px;
         }
@@ -151,8 +151,8 @@
             desenhos[4]=document.getElementById("bracoD");
             desenhos[5]=document.getElementById("pernaE");
             desenhos[6]=document.getElementById("pernaD");
-            document.getElementById("cabeca").src="#";
-            for(var i=1;i<7;i++){
+            desenhos[7]=document.getElementById("cabeca")
+            for(var i=1;i<=7;i++){
                 desenhos[i].style.display="none";
             }
         }
@@ -201,12 +201,12 @@
             <div id="dvletrasdigitadas">Letras Digitadas:</div>
         </div>
         <div id="dvForca">
-            <img src="" alt="">
-            <img src="" alt="">
-            <img src="" alt="">
-            <img src="" alt="">
-            <img src="" alt="">
-            <img src="" alt="">
+            <img src="imgs/cabeca.png" alt="">
+            <img src="imgs/corpo.png" alt="">
+            <img src="imgs/bracoE.png" alt="">
+            <img src="imgs/bracoD.png" alt="">
+            <img src="imgs/pernaE.png" alt="">
+            <img src="imgs/pernaD" alt="">
         </div>
     </div>
 </body>
