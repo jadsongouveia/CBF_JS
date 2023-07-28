@@ -79,14 +79,16 @@
             for(var i=0;i<20;i++){
                 obj=document.getElementById("letra"+i).value="";
                 obj=document.getElementById("letra"+i).style.display="none"
+                console.log(obj)
             }
             for(var i=0;i<l;i++){
-                obj.document.getElementById("letra"+i).style.display="inline-block";
+                obj=document.getElementById("letra"+i).style.display="inline-block";
+                console.log(obj)
             }
         }
 
         function jogar(){
-            //jog=document.getElementById("letraJ");
+            jog=document.getElementById("letraJ");
             jog.focus();
             if(jog.value==""){
                 alert("Digite uma Letra")
@@ -109,7 +111,7 @@
                         acertou=true
                     }
                     if(!acertou){
-                        document.getElementById("dvletrasdigitadas").innerHTML+=letra.toUpperCase() + " ";
+                        document.getElementById("dvletrasdigitadas").innerHTML+=letra+",".toUpperCase();
                         erros++;
                         if(erros<7){
                             desenhos[erros].style.display="block";
@@ -149,7 +151,7 @@
             desenhos[4]=document.getElementById("bracoD");
             desenhos[5]=document.getElementById("pernaE");
             desenhos[6]=document.getElementById("pernaD");
-            document.getElementById("cabeca").src="cabeca1.png";
+            document.getElementById("cabeca").src="#";
             for(var i=1;i<7;i++){
                 desenhos[i].style.display="none";
             }
