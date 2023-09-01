@@ -101,6 +101,7 @@
             posBolaX+=velBola*bolaX;
             posBolaY+=velBola*bolaY;
 
+
             //Colisão com jogador
             if(
                 (posBolaX <= posJogadorX+barraW)&&
@@ -115,7 +116,7 @@
                 ((posBolaY+bolaH >= posCpuY)&&(posBolaY <=posCpuY+barraH))
             ){
                 bolaY=(((posBolaY+(bolaH/2))-(posCpuY+(barraH/2)))/16);
-                bolaX*=-1;
+                bolaX*=1;
             }
 
             vbola.style.top=posBolaY+"px";
@@ -168,13 +169,15 @@
         }
 
         function inicializa(){
-            velBola=velCpu=velJogador=8;
+            velBola=8 
+            velCpu= 8
+            velJogador=8;
             vbtIniciar=document.getElementById("btIniciar");
-            vbtIniciar.addEventListener("click",iniciaJogo);
             vjogador=document.getElementById("dvJogador");
             vcpu=document.getElementById("dvCpu");
             vbola=document.getElementById("dvBola");
             vPaineltxtPontos=document.getElementById("txtPontos");
+            vbtIniciar.addEventListener("click",iniciaJogo);
             document.addEventListener("keydown",teclaDw);
             document.addEventListener("keyup",teclaUp);
         }
