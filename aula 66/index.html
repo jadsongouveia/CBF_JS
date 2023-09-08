@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AULA 66</title>
+    <style>
+
+        #painel{
+            width: 400px;
+            height: 500px;
+            border: 1px solid #000;
+            border-radius: 10px;
+            padding: 10px;
+        }
+    </style>
+    <script>
+
+        var painel;
+
+        function inicia(){
+            painel=document.getElementById("painel");
+            painel.innerHTML+="Resolução: " + screen.width + "px X "+ screen.height + "px<hr>";
+            //largura e altura da div.
+            painel.innerHTML+="Resolução disponivel: " + screen.availWidth + "px X "+ screen.availHeight + "px<hr>";
+            //largura e altura tirando a barra de tarefas.
+            painel.innerHTML+="Profundidade de cores (imagens):" + screen.colorDepth + "bits<hr>";
+            //retorna a quantidade de cores e a profundidade das cores.
+            painel.innerHTML+="Resolução cor da tela (pixel):" + screen.pixelDepth + "bits/pixel<hr>";
+            //retornar a informação de resolução da cor em bits por pixel.
+
+        }
+
+        window.addEventListener("load",inicia);
+    </script>
+</head>
+<body>
+    <h2>Aula Objeto Screen</h2>
+    
+    <div id="painel"></div>
+</body>
+</html>

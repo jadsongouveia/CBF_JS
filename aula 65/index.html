@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AULA 65</title>
+    <style>
+        #painel{
+            width: 400px;
+            height: 500px;
+            border: 1px solid #000;
+            border-radius: 10px;
+            padding: 10px;
+        }
+        h2{
+            text-align: center;
+        }
+    </style>
+    <script>
+
+        var painel;
+
+        function localizar(pos){
+            var c=pos.coords;
+            painel.innerHTML+="Localização: Lat: " + c.latitude + " - Lon: " + c.longitude + "<hr>";
+        }
+
+        function verifica(){
+            painel=document.getElementById("painel");
+                                                         //PROPRIEDADES
+            // BROWSER QUER DIZER NAVEGADOR                    |               
+            painel.innerHTML="Nome do browser: "+ navigator.appName + "<hr>";
+            //NOME DO BROWSER
+            painel.innerHTML+="Versão do browser: "+ navigator.appVersion + "<hr>";
+            //VERSÃO DO BROWSER
+            painel.innerHTML+="Cookies: "+ navigator.cookieEnabled + "<hr>";
+            //VERIFICA SE TEM COOKIES OU NÃO
+            navigator.geolocation.getCurrentPosition(localizar);
+            //LOCALIZAÇÃO(ESTA NA FUNCTION LOCALIZAR)
+            painel.innerHTML+="Idioma: "+ navigator.language + "<hr>";
+            //IDIOMA
+            painel.innerHTML+="onLine: "+ navigator.onLine + "<hr>";
+            //DIZ SE O BROWSER ESTA ONLINE OU NÃO 
+            painel.innerHTML+="S.O.: "+ navigator.platform + "<hr>";
+            //QUAL SISTEMA OPERACIONAL O BROWSER ESTA RODANDO
+            painel.innerHTML+="Engine: "+ navigator.product + "<hr>";
+            //OBTER A ENDINE DO BROWSER
+            painel.innerHTML+="Agente: "+ navigator.userAgent + "<hr>";
+            //OBTER QUAL AGENTE FOI ENVIADO PRA O BROWSER PELO SERVIDOR
+        }
+
+        window.addEventListener("load",verifica)
+    </script>
+</head>
+<body>
+    <h2> Aula Objeto Navigator</h2>
+    <div id="painel"></div>
+</body>
+</html>
