@@ -15,28 +15,25 @@
     //Reprovado             >= 40 && <60
     //Reprovado como imbecil <20
 
-    if(nota>=60){
+    if(nota >= 90){
         res="Aprovado"
-        if(nota>=95){
-            if(nota == 100){
-                res+=" com excelencia";
-            } else {
-                res+=" com louvor";
-            }
+        if(nota == 100){
+            res+=" Com Excelência"
         }else{
-            res+=" com nota normal"
+            res+=" Com Louvor"
         }
     }else if(nota >= 40){
-        res="Recuperacao";
+        res="Recuperação"
     }else{
-        res="Reprovado";
+        res="Reprovado"
         if(nota >= 20){
-            res+=" por nota baixa";
-        } else{
-            res+=" por ser idiota";
+            res+=" Por nota baixa"
+        }else{
+            res+=" Por ser um idiota"
         }
     }
-    document.write(res);
+    
+    document.write(res)
     </script>
 </body>
 </html>
