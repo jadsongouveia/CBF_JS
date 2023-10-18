@@ -4,17 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aula 67</title>
-    <style>
-
-    </style>
     <script>
 
-        var painel;
+            var painel,btnB,btnF,btnG;
 
-        function inicia(){
-            painel=document.getElementById("info");
-            painel.innerHTML=history.length;
-        }
+            function hB(){
+                window.history.back();
+            }
+
+            function hF(){
+                window.history.forward();
+            }
+
+            function hG(){
+                window.history.go(-2);
+            }
+
+            function inicia(){
+                btnB=document.getElementById("btnback");
+                btnF=document.getElementById("btnForward");
+                btnG=document.getElementById("btnBack2");
+
+                btnB.addEventListener("click",hB);
+                btnF.addEventListener("click",hF);
+                btnG.addEventListener("click",hG);
+
+                painel=document.getElementById("info");
+                painel.innerHTML=history.length;
+            }
 
         window.addEventListener("load",inicia);
 
@@ -29,5 +46,6 @@
     <a href="p3.html">Página 3</a><hr>
     <button id="btnback">Voltar</button>
     <button id="btnForward">Avançar</button>
+    <button id="btnBack2">Voltar 2</button>
 </body>
 </html>
