@@ -9,8 +9,11 @@
     </style>
     <script>
 
-        function inicia(){
+        var painel;
 
+        function inicia(){
+            painel=document.getElementById("info");
+            painel.innerHTML=history.length;
         }
 
         window.addEventListener("load",inicia);
