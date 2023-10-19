@@ -4,6 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aula 70</title>
+    <script>
+
+        if(typeof(Storage)!="undefined"){ 
+            //localStorage.setItem("canal","CFBCursos")
+            //localStorage.removeItem("canal","CFBCursos");
+            //var vcanal =localStorage.getItem("canal");
+            //document.write(vcanal);
+
+            if(localStorage.visitas){
+                localStorage.visitas=Number(localStorage.visitas)+1
+            }else{
+                //localStorage.setItem("visitas","1");
+                localStorage.visitas=1; //As duas linhas residem a mesma funçao so muda o metodo
+            }
+            document.write("Visitas: "+localStorage.visitas);
+
+        }else{
+            document.write("Sem suporte ao web Storage")
+        }
+
+        
+
+    </script>
 </head>
 <body>
     
