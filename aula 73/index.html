@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt=br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 73</title>
+    <style>
+
+    </style>
+    <script>
+
+        function incia(){
+            document.getElementById("btnAdd").addEventListener("click",function(){
+                var lista=document.getElementById("listaElementos");
+                var texto=document.getElementById("fnovo");
+                var li=document.createElement("li");
+                li.textContent=texto.value;
+                lista.appendChild(li);
+                texto.value="";
+                texto.focus;
+
+            });
+
+        }
+
+        window.addEventListener("load",incia)
+
+    </script>
+</head>
+<body>
+
+    <input type="text" id="fnovo"><button id="btnAdd">Adicionar</button><br><br>
+
+    <ul id="listaElementos"></ul>
+
+
+/*
+  <title>Adicionar Item</title>
+</head>
+<body>
+
+<input type="text" id="itemInput" onkeydown="handleKeyDown(event)">
+<button onclick="adicionarItem()">Adicionar</button>
+
+<script>
+function adicionarItem() {
+  // Obter o valor do input
+  var inputValue = document.getElementById("itemInput").value;
+
+  // Verificar se o valor não está vazio
+  if (inputValue.trim() !== "") {
+    // Adicionar o item (você pode substituir este console.log pela lógica desejada)
+    console.log("Adicionando item: " + inputValue);
+
+    // Limpar o input após adicionar
+    document.getElementById("itemInput").value = "";
+  }
+}
+
+function handleKeyDown(event) {
+  // Verificar se a tecla pressionada é Enter (código 13)
+  if (event.key === "Enter") {
+    // Chamar a função de adicionar quando Enter é pressionado
+    adicionarItem();
+  }
+}
+</script>
+
+</body>
+</html>
+*/
+
+</body>
+</html>
