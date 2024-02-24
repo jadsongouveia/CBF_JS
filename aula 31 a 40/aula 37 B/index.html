@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Refazendo projeto 37</title>
+    <title>Praticando Aula 37</title>
     <style>
         #dv1{
             width: 100px;
@@ -11,83 +11,66 @@
             border: 1px solid #000;
             background-color: #fff;
             position: absolute;
-            left: 0px;
-            top: 0px;
+            left: 0;
+            top: 0;
         }
     </style>
     <script>
-//   1° Passo declarar as variaveis 
-        var dx;
-        var dy;
         var px;
         var py;
+        var dx;
+        var dy;
         var vel;
         var obj;
         var tmp;
-        var podeAndar= false;
+        var podeAndar=false;
 
-//   2° Passo declarar os valores a cada variavel
         function inicia(){
-            dx=0
-            dy=0
             px=0
             py=0
+            dx=0
+            dy=0
             vel=1
             obj=document.getElementById("dv1")
-            document.addEventListener("keydown",teclaDw)
-            document.addEventListener("keyup",telcaUp)
-            tmp=setInterval(enterFrame,1)
-            document.addEventListener("click",mudaCor)
+            document.addEventListener("keydown",)
+            document.addEventListener("keyup",)
+            tmp=setInterval(,1)
         }
 
-//   3° Passo criar a função de movimento
         function teclaDw(){
-            var tecla=event.keyCode;
-            if(tecla == 37){
-                dx=-1
-            }else if(tecla == 38){
-                dy=-1
-            }else if(tecla == 39){
-                dx=1
-            }else if(tecla == 40){
-                dy=1
+            if(podeAndar == true){
+                var tecla= event.keyCode
+                if(tecla==37){
+                    dx-1
+                }else if(tecla==38){
+                    dy=-1
+                }else if(tecla==39){
+                    dx=1
+                }else if(tecla==40){
+                    dy=1
+                }
             }
         }
 
-//   4° Passo criar a função de parar o movimento
-        function telcaUp(){
-            var tecla=event.keyCode;
-            if(tecla == 37){
+        function teclaUp(){
+            var tecla=event.keyCode
+            if(tecla==37){
                 dx=0
-            }else if(tecla == 38){
+            }else if(tecla==38){
                 dy=0
-            }else if(tecla == 39){
+            }else if(tecla==39){
                 dx=0
-            }else if(tecla == 40){
+            }else if(tecla==40){
                 dy=0
             }
-        }        
+        }
 
-//   5° Passo Criar a funçao de tempo do intervalo 
         function enterFrame(){
-            px+=dx*vel;
-            py+=dy*vel;
-            obj.style.left=px+'px';
-            obj.style.top=py+'px';
+            px+=dx*vel
+            py+=dy*vel
+            obj.style.left=px+'px'
+            obj.style.top=py+'px'
         }
-
-//  6° Passo Criar uma função muda cor da div no click
-        function mudaCor(){
-            if(podeAndar == false){
-                obj.style.backgroundColor='#f00';
-                podeAndar=true
-            }else if(podeAndar == true){
-                obj.style.backgroundColor='#fff';
-                podeAndar=false
-            }
-        }
-
-        window.addEventListener("load",inicia)
     </script>
 </head>
 <body>
