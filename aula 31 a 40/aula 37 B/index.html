@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Praticando Aula 37</title>
     <style>
-        #dv1{
+         #dv1{
             width: 100px;
             height: 100px;
             border: 1px solid #000;
             background-color: #fff;
             position: absolute;
-            left: 0;
-            top: 0;
+            left: 0px;
+            top: 0px;
         }
     </style>
     <script>
@@ -32,16 +32,17 @@
             dy=0
             vel=1
             obj=document.getElementById("dv1")
-            document.addEventListener("keydown",)
-            document.addEventListener("keyup",)
-            tmp=setInterval(,1)
+            document.addEventListener("keydown",teclaDw)
+            document.addEventListener("keyup",teclaUp)
+            tmp=setInterval(enterFrame,1)
+            document.addEventListener("click",mudaCor)
         }
 
         function teclaDw(){
             if(podeAndar == true){
-                var tecla= event.keyCode
+                var tecla = event.keyCode;
                 if(tecla==37){
-                    dx-1
+                    dx=-1
                 }else if(tecla==38){
                     dy=-1
                 }else if(tecla==39){
@@ -53,7 +54,7 @@
         }
 
         function teclaUp(){
-            var tecla=event.keyCode
+            tecla = event.keyCode;
             if(tecla==37){
                 dx=0
             }else if(tecla==38){
@@ -66,11 +67,23 @@
         }
 
         function enterFrame(){
-            px+=dx*vel
-            py+=dy*vel
-            obj.style.left=px+'px'
-            obj.style.top=py+'px'
+            px+=dx*vel;
+            py+=dy*vel;
+            obj.style.left= px+"px";
+            obj.style.top= py+"px";
         }
+
+        function mudaCor(){
+            if(podeAndar == false){
+                obj.style.backgroundColor='#f00'
+                podeAndar=true
+            }else if(podeAndar == true){
+                obj.style.backgroundColor='#fff'
+                podeAndar=false
+            }
+        }
+
+        window.addEventListener("load",inicia)
     </script>
 </head>
 <body>
